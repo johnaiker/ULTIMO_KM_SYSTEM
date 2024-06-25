@@ -1,0 +1,10 @@
+.card.card_select_vuelo {
+
+    /* background: white; */
+}
+.card.card_select_vuelo:hover {
+    background-color: #e1e1e1;
+}
+.hidden {
+    display: none!important;
+}
