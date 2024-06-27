@@ -33,7 +33,7 @@ include 'includes/header.php'; // Incluir Archivo de PHP
         $montoTotal += floatval($_SESSION["vuelo_info_ret"]["precio"]);
     }
     
-    echo  "MONTO TOTAL: ". $montoTotal;
+    // echo  "MONTO TOTAL: ". $montoTotal;
 ?>
 
 
@@ -47,16 +47,16 @@ include 'includes/header.php'; // Incluir Archivo de PHP
 <table class="table table-striped container">
     <?php 
 
-    foreach ($_SESSION as $key => $value) {
-        echo "<tr>";
-        echo "<td>";
-        var_dump($key);
-        echo "</td>";
-        echo "<td>";
-        var_dump($value);
-        echo "</td>";
-        echo "</tr>";
-    }
+    // foreach ($_SESSION as $key => $value) {
+    //     echo "<tr>";
+    //     echo "<td>";
+    //     var_dump($key);
+    //     echo "</td>";
+    //     echo "<td>";
+    //     var_dump($value);
+    //     echo "</td>";
+    //     echo "</tr>";
+    // }
 
     ?>
 </table>
@@ -184,9 +184,9 @@ include 'includes/header.php'; // Incluir Archivo de PHP
                                         <th scope="col">
                                             <div class="d-flex align-items-center"><span class="material-symbols-outlined me-2"> flight_class </span>Clase</div>
                                         </th>
-                                        <th scope="col">
+                                        <!-- <th scope="col">
                                             <div class="d-flex align-items-center"><span class="material-symbols-outlined me-2"> connecting_airports </span>Tipo</div>
-                                        </th>
+                                        </th> -->
                                         <th scope="col">
                                             <div class="d-flex align-items-center"><span class="material-symbols-outlined me-2"> flight </span>Ruta</div>
                                         </th>
@@ -200,7 +200,7 @@ include 'includes/header.php'; // Incluir Archivo de PHP
                                     <tr>
                                         <td class="fw-bold"><?= $_SESSION["vuelo_info"]["fecha"]// $_POST["fecha"] ?></td>
                                         <td class="text-primary fw-bold fs-5"><?= $_SESSION["vuelo_info"]["clase"]// $_POST["clase"] ?></td>
-                                        <td class="text-uppercase fw-bold">Sin retorno</td>
+                                        <!-- <td class="text-uppercase fw-bold">Sin retorno</td> -->
                                         <td><?=$_SESSION["vuelo_info"]["ruta_orig"]?>-<?=$_SESSION["vuelo_info"]["ruta_ret"]?></td>
                                         <td class="fw-bold text-success">$ <?= $_SESSION["vuelo_info"]["precio"]// $_POST["precio"] ?></td>
                                     </tr>
@@ -209,7 +209,7 @@ include 'includes/header.php'; // Incluir Archivo de PHP
                                         <tr>
                                             <td class="fw-bold"><?= $_SESSION["vuelo_info_ret"]["fecha"]// $_POST["fecha"] ?></td>
                                             <td class="text-primary fw-bold fs-5"><?= $_SESSION["vuelo_info_ret"]["clase"]// $_POST["clase"] ?></td>
-                                            <td class="text-uppercase fw-bold">Sin retorno</td>
+                                            <!-- <td class="text-uppercase fw-bold">Sin retorno</td> -->
                                             <td><?=$_SESSION["vuelo_info_ret"]["ruta_orig"]?>-<?=$_SESSION["vuelo_info_ret"]["ruta_ret"]?></td>
                                             <td class="fw-bold text-success">$ <?= $_SESSION["vuelo_info_ret"]["precio"]// $_POST["precio"] ?></td>
                                         </tr>

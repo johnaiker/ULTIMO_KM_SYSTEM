@@ -4,7 +4,7 @@
     
 $servername = "localhost";
 $username = "root";
-$password = "246678";
+$password = "";
 $database = "km_airlines";
 
 

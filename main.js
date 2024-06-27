@@ -1,12 +1,12 @@
 $().ready(function () { 
 
 	
-	// Inputmask("####-##-##", {
-	// 	placeholder: "-",
-	// 	greedy: false,
-	// 	casing: "upper",
-	// 	jitMasking: true
-	// }).mask('#fecha_n');
+	Inputmask("####-##-##", {
+		placeholder: "-",
+		greedy: false,
+		casing: "upper",
+		jitMasking: true
+	}).mask('#fecha_n');
 
 	Inputmask("##/##", {
 		placeholder: "-",
@@ -21,12 +21,18 @@ $().ready(function () {
 	$(function () {
 		$("#fecha_n").
 		datepicker({
+			shortYearCutoff: 50,
+			maxDate: "-1m +1w",
+			yearRange: "1940:2024",
 			changeMonth: true,
 			changeYear: true,
-			dateFormat: "yy-mm-dd"
+			dateFormat: "yy-mm-dd",
+			showMonthAfterYear: true,
 		});
 	});
 	
+	$('#fecha_ida').datepicker({minDate:  "-1d", dateFormat: "yy-mm-dd",}); 
+
 	$(function () {
 		$(".fecha_input").
 		datepicker({
@@ -34,9 +40,12 @@ $().ready(function () {
 		});
 	});
 
+
 	$('#fecha_ida').change(function() { 
+		
 		startDate = $(this).
 		datepicker('getDate'); 
+		// console.log(startDate)
 		$("#fecha_ret").
 		datepicker("option", "minDate", startDate); 
 	});

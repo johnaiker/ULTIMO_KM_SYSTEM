@@ -86,7 +86,7 @@ if (isset($_POST["clase_r"])) {
                                 </div>
                                 <div class="col-6">
                                     <div class="form-floating mb-3" >
-                                        <input required type="text" readonly class="form-control" name="fecha_n" id="fecha_n" placeholder="fecha_n"  />
+                                        <input required type="text" class="form-control" name="fecha_n" id="fecha_n" placeholder="fecha_n"  />
                                         <label for="fecha_n" class="d-flex align-items-center" ><span class="material-symbols-outlined me-2"> cake </span>  Fecha de nacimiento</labellabel >
                                     </div>
                                 </div>
@@ -119,9 +119,9 @@ if (isset($_POST["clase_r"])) {
                                         <th scope="col">
                                             <div class="d-flex align-items-center"><span class="material-symbols-outlined me-2"> flight_class </span>Clase</div>
                                         </th>
-                                        <th scope="col">
+                                        <!-- <th scope="col">
                                             <div class="d-flex align-items-center"><span class="material-symbols-outlined me-2"> connecting_airports </span>Tipo</div>
-                                        </th>
+                                        </th> -->
                                         <th scope="col">
                                             <div class="d-flex align-items-center"><span class="material-symbols-outlined me-2"> flight </span>Ruta</div>
                                         </th>
@@ -131,11 +131,11 @@ if (isset($_POST["clase_r"])) {
                                     </tr>
                                 </thead>
                                 
-                                <tbody class="table-group-divider text-center">
+                                <tbody class="table-group-divider text-left">
                                     <tr>
                                         <td class="fw-bold"><?= $_POST["fecha"] ?></td>
                                         <td class="text-primary fw-bold fs-5"><?= $_POST["clase"] ?></td>
-                                        <td class="text-uppercase fw-bold"><?= $_POST["tipo"] == "ida" ? "Solo Ida" : "Con retorno"  ?></td>
+                                        <!-- <td class="text-uppercase fw-bold"><? //$_POST["tipo"] == "ida" ? "Solo Ida" : "Con retorno"  ?></td> -->
                                         <td><?= $_POST["ruta_orig"]."-".$_POST["ruta_ret"] ?></td>
                                         <td class="fw-bold text-success">$ <?= $_POST["precio"] ?></td>
                                     </tr>
@@ -143,7 +143,7 @@ if (isset($_POST["clase_r"])) {
                                         <tr>
                                             <td class="fw-bold"><?= $_POST["fecha_r"] ?></td>
                                             <td class="text-primary fw-bold fs-5"><?= $_POST["clase_r"] ?></td>
-                                            <td class="text-uppercase fw-bold"><?= $_POST["tipo"] == "ida" ? "Solo Ida" : "Con retorno"  ?></td>
+                                            <!-- <td class="text-uppercase fw-bold"><? //$_POST["tipo"] == "ida" ? "Solo Ida" : "Con retorno"  ?></td> -->
                                             <td><?= $_POST["ruta_ret"]."-".$_POST["ruta_orig"] ?></td>
                                             <td class="fw-bold text-success">$ <?= $_POST["precio_r"] ?></td>
                                         </tr>
